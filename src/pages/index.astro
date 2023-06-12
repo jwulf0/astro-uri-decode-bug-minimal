@@ -1,5 +1,9 @@
 ---
-import HelloInput from '../components/hello/HelloInput.svelte'
+const param1 = 'foo $?& bar'
+const param2 = 'foo%bar'
+
+const uri1 = `/hello/${encodeURIComponent(param1)}`
+const uri2 = `/hello/${encodeURIComponent(param2)}`
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +12,9 @@ import HelloInput from '../components/hello/HelloInput.svelte'
 		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
-        <HelloInput client:load />
+        <ul>
+			<li><a href={uri1}>Greet "{param1}"</a> (works)</li>
+			<li><a href={uri2}>Greet "{param2}"</a> (breaks)</li>
+		</ul>
 	</body>
 </html>

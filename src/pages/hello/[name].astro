@@ -1,9 +1,5 @@
 ---
-import HelloInput from '../../components/hello/HelloInput.svelte'
-import HelloOutput from '../../components/hello/HelloOutput.svelte'
-
 const name = Astro.params.name || ''
-
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +8,6 @@ const name = Astro.params.name || ''
 		<meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
-        <HelloInput client:load />
-		<HelloOutput name={name} />
+        <h2>Hello {name}!</h2>
 	</body>
 </html>

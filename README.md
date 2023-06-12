@@ -5,7 +5,7 @@ Encoding the percent sign in a path parameter causes an error. To reproduce:
 * npm install
 * npm run dev
 * visit `localhost:3000`
-* Enter any value containing the `%` character and submit the form.
+* try both of the links
 
 You will see a `URI malformed` with reference to a line where `decodeURIComponent` is called.
 
