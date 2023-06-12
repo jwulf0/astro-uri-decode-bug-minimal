@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.6.3",
-    "@astrojs/svelte": "^2.1.0"
+    "astro": "^2.6.3"
   }
 }
